@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ESP8266 CRUD Operations</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>ESP8266 CRUD Operations</h1>
+
+    <div id="themeToggle">
+        <button onclick="toggleTheme()">Toggle Dark Mode</button>
+    </div>
+
+    <div id="wifiConfig">
+       
+        <form id="wifiForm">
+            
+            <input type="text" id="wifiSSID" name="ssid" required value="wifiSsid" hidden>
+            
+            <input type="password" id="wifiPassword" name="password" required value="wifipassword" hidden>
+           
+            <button type="button" onclick="changeWiFi()">Change WiFi</button>
+        </form>
+    </div>
+
+    <h2>Create Entry</h2>
+    <form id="createForm">
+        <label for="createName">Name:</label>
+        <input type="text" id="createName" name="name" required>
+        <br>
+        <label for="createLastname">Lastname:</label>
+        <input type="text" id="createLastname" name="lastname" required>
+        <br>
+        <label for="createAge">Age:</label>
+        <input type="number" id="createAge" name="age" required>
+        <br>
+        <button type="button" onclick="createEntry()">Create</button>
+    </form>
+
+    <h2>Entries</h2>
+    <table id="entriesTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Lastname</th>
+                <th>Age</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
